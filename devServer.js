@@ -31,7 +31,6 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use('/dist', express.static('public'));
 
 
 // serve index.html

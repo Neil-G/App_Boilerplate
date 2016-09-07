@@ -1,6 +1,6 @@
 let chai = require('chai');
 let chaiHttp = require('chai-http');
-let app = require('./../app');
+let app = require('./../../app');
 
 var server = app.listen(3001)
 

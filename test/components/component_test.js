@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import { expect } from 'chai'
 // import sinon from 'sinon';
 
-import App from './../client-src/App';
+import App from './../../client-src/App';
 
 describe('<App />', () => {
   it('renders <App /> components', () => {
