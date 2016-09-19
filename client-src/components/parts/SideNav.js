@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 
 
-const style = { position: 'fixed', border: '1px solid tomato', top: '0', bottom: '0', left: '0',  width: '90px' }
+const style = { position: 'fixed', border: '1px solid tomato', top: '0', bottom: '0', left: '0',  width: '120px' }
 
 class SideNav extends Component {
   render() {
