@@ -7,14 +7,14 @@ var graphQLHTTP = require('express-graphql');
 var graphql = require ('graphql').graphql;
 var Schema = require('./build/graphql');
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+// var MongoStore = require('connect-mongo')(session);
 
 // var sessionOptions = {
 //   secret: 'secret',
 //   resave: true,
 //   saveUninitialized: true,
 //   store: new MongoStore({
-//     url: "mongodb://neil:supanore@ds019766.mlab.com:19766/test_sessions"
+//     url: 'URL'
 //   })
 // }
 
@@ -44,6 +44,10 @@ var MongoStore = require('connect-mongo')(session);
 var app = express();
 
 
+
+
+
+
 // app.use(session(sessionOptions));
 app.use('/graphql', graphQLHTTP({ schema: Schema, pretty: true }))
 // app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -51,7 +55,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('public')); // couldn't find skeleton without this
-app.use('/dist', express.static('public'));
+// app.use('/dist', express.static('public'));
 
 // routes
 // app.use('/api/locations', locations);
