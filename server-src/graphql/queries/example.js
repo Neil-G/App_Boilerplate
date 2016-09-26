@@ -14,18 +14,11 @@ var TODOs = [
   }
 ];
 
-var queryType = new graphql.GraphQLObjectType({
-  name: 'Query',
-  fields: function () {
-    return {
-      todos: {
-        type: new graphql.GraphQLList(TodoType),
-        resolve: function () {
-          return TODOs;
-        }
-      }
-    }
+var todos = {
+  type: new graphql.GraphQLList(TodoType),
+  resolve: function () {
+    return TODOs;
   }
-});
+}
 
-module.exports = queryType;
+module.exports = todos;
